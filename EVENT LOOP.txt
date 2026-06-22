@@ -1,0 +1,10 @@
+Node js Internal Working & Handling of blocking / non blocking operations:
+
+
+Any request is first queued in the Event Queue from which one by one feed to the Event Loop which then distinguishes the request type into either blocking(Synchronous) operation/non blocking(Asynchronous) operation.
+
+
+Blocking operations: These directly blocks the execution of the node js main thread and no other request is processed until this is not completed.
+
+Non Blocking operations: These kind of operations are handed to a thread from the node's thread pool (libuv thread pool) which and doesn't blocks the main threads execution.
+
